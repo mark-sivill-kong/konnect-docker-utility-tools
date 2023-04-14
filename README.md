@@ -1,5 +1,5 @@
 # konnect-docker-utility-tools
-Kong Konnect and miscellaneous utility tooling in one Docker container, includes example of converting OpenAPI specifications to Kong YAML configuration then uploading into Konnect.
+Kong Konnect and miscellaneous utility tooling in one Docker container. Includes example of converting OpenAPI specifications to Kong YAML configuration and then uploading into Kong Konnect.
 
 ## Tooling
 
@@ -37,23 +37,27 @@ to find the \<container-id\>, then the following command to access the docker co
 
 ```docker exec -it <container-id> /bin/sh```
 
-Once inside the container the command line tools can be access, for example
+Once inside the container the command line tools can be accessed, for example
 
 ```deck version```
 
 ## Included tooling
 
-The tooling that is installed can be found by running
+The tooling and associated versions that are installed can be found by running
 
 ```versions.sh```
 
 ## Additional scripts
 
+### deck commands
+
 Example deck commands can be found by running
 
 ```commands.sh```
 
-Example pipeline that converts OpenAPI to Kong configuration then uploads into Konnect
+### example custom script
+
+Example pipeline that converts OpenAPI to Kong configuration and then uploads into Kong Konnect
 
 ```~/scripts/pipeline/run_pipeline.sh <OpenAPI-specification>```
 
