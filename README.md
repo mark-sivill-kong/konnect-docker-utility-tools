@@ -77,3 +77,10 @@ To run the pipeline script ensure the following environment variables have been 
 * KONNECT_ADDR - [Konnect Region specific API](https://docs.konghq.com/konnect/api/) for example [https://eu.api.konghq.com](https://eu.api.konghq.com) or [https://us.api.konghq.com](https://us.api.konghq.com)
 * KONNECT_PAT - Konnect personal access token created within Konnect, found under user name
 * KONNECT_RUNTIME_GROUP - runtime instance name where configuration is to be deployed
+
+## Third party assets
+
+The following OpenAPI specifciations are included in this repository which may have their own licensing terms
+
+* transport-for-london-1.5.yaml dervived from [Transport for London Unified API](https://api.tfl.gov.uk/)
+* world-time-openapi.yaml [WorldTimeAPI](http://worldtimeapi.org/)
