@@ -1,0 +1,36 @@
+#
+# Kong Konnect and miscellaneous utility tooling in one Docker container.
+# Includes example of converting OpenAPI specifications to Kong YAML configuration then uploading into Konnect.
+#
+# created by Mark Sivill - April 2023
+#
+
+#
+# if uploading configuration to Konnect define the following environment variables
+#
+# KONNECT_ADDR
+# KONNECT_PAT
+# KONNECT_RUNTIME_GROUP
+#
+
+version: '3.9'
+
+networks:
+  konnect-utility-network:
+
+name:
+  konnect-utility
+
+services:
+
+  konnect-utility:
+    build: ./konnect-utility
+    environment:
+      - KONNECT_ADDR=${KONNECT_ADDR}
+      - KONNECT_PAT=${KONNECT_PAT}
+      - KONNECT_RUNTIME_GROUP=${KONNECT_RUNTIME_GROUP}
+    entrypoint: [ "sh", "-c", "/home/demo/scripts/loop/loop.sh"]        # the default entrypoint is a loop
+    networks:
+      - konnect-utility-network 
+  
+
